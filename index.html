@@ -2,158 +2,613 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#ffffff" />
   <title>Tobechukwu Mamah — Software Engineer</title>
-  <meta name="description" content="Tobechukwu Mamah — Software Engineer. Systems, Blockchain, DevOps, Full-stack developer. Portfolio & projects." />
+  <meta name="description" content="Tobechukwu Mamah — Full-stack developer specializing in systems engineering, NestJS, React, and scalable cloud architecture. Portfolio featuring DrivenLuxe, Wokizy, and ETB Enterprise." />
   <style>
-    :root{--bg:#000;--card:#0f0f0f;--muted:#cfcfcf;--glass:rgba(255,255,255,0.03);--accent:#ffffff}
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;color:var(--accent);background:var(--bg);-webkit-font-smoothing:antialiased}
-    .container{max-width:1100px;margin:28px auto;padding:22px}
-    header{display:flex;align-items:center;gap:18px}
-    .avatar{width:84px;height:84px;border-radius:12px;background:#111;display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700;font-size:28px;border:1px solid rgba(255,255,255,0.06)}
-    h1{margin:0;font-size:26px}
-    p.lead{margin:6px 0 0;color:var(--muted);line-height:1.4}
-    .badges{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
-    .badge{background:transparent;padding:6px 10px;border-radius:8px;font-size:13px;color:var(--muted);border:1px solid rgba(255,255,255,0.06)}
-    nav.toplinks{margin-left:auto}
-    nav a{color:var(--muted);text-decoration:none;margin-left:12px}
+    :root {
+      --bg: #ffffff;
+      --card: #f9f9f9;
+      --text: #0a0a0a;
+      --text-muted: #666666;
+      --border: rgba(0, 0, 0, 0.08);
+      --glass: rgba(0, 0, 0, 0.02);
+      --accent: #0066cc;
+      --accent-hover: #0052a3;
+    }
 
-    /* hero cards */
-    .grid{display:grid;grid-template-columns:1fr 340px;gap:18px;margin-top:22px}
-    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);}
-    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-    .project{padding:12px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.03)}
-    .project h4{margin:0 0 6px;font-size:15px}
-    .project p{margin:0;color:var(--muted);font-size:13px}
-    aside .stats img{width:100%;border-radius:8px}
+    html[data-theme="dark"] {
+      --bg: #0a0a0a;
+      --card: #0f0f0f;
+      --text: #ffffff;
+      --text-muted: #a0a0a0;
+      --border: rgba(255, 255, 255, 0.08);
+      --glass: rgba(255, 255, 255, 0.02);
+    }
 
-    /* figma gallery */
-    .figma-grid{display:flex;gap:12px;flex-wrap:wrap}
-    .fig-thumb{width:150px;height:100px;border-radius:8px;background:#0b0b0b;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px;border:1px solid rgba(255,255,255,0.03);text-decoration:none}
+    * {
+      box-sizing: border-box;
+    }
 
-    footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
 
-    a{color:var(--accent)}
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
 
-    /* responsive */
-    @media (max-width:980px){.grid{grid-template-columns:1fr}.projects{grid-template-columns:1fr}}
-    @media (max-width:520px){.avatar{width:64px;height:64px;font-size:22px}.project{padding:10px}.fig-thumb{width:120px;height:84px}}
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 2rem 1.5rem;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .avatar {
+      width: 80px;
+      height: 80px;
+      border-radius: 12px;
+      background: var(--card);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 28px;
+      border: 2px solid var(--accent);
+      flex-shrink: 0;
+    }
+
+    .header-content h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 700;
+    }
+
+    .header-content .subtitle {
+      color: var(--text-muted);
+      margin: 0.25rem 0 0;
+      font-size: 16px;
+    }
+
+    .header-content p {
+      margin: 0.75rem 0 0;
+      color: var(--text-muted);
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
+    .badges {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-top: 1rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: var(--glass);
+      color: var(--text);
+      text-decoration: none;
+      font-size: 13px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .badge:hover {
+      border-color: var(--accent);
+      background: var(--card);
+    }
+
+    .header-nav {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .theme-toggle {
+      background: none;
+      border: 1px solid var(--border);
+      padding: 0.5rem 0.75rem;
+      border-radius: 8px;
+      cursor: pointer;
+      color: var(--text);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      transition: all 0.2s ease;
+    }
+
+    .theme-toggle:hover {
+      border-color: var(--accent);
+      background: var(--glass);
+    }
+
+    nav a {
+      color: var(--text);
+      text-decoration: none;
+      font-size: 15px;
+      transition: color 0.2s ease;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .main-grid {
+      display: grid;
+      grid-template-columns: 1fr 320px;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      transition: all 0.2s ease;
+    }
+
+    .card:hover {
+      border-color: var(--accent);
+    }
+
+    .card h2 {
+      margin: 0 0 1.5rem;
+      font-size: 22px;
+    }
+
+    .card h3 {
+      margin: 0 0 0.75rem;
+      font-size: 18px;
+    }
+
+    .card h4 {
+      margin: 0 0 0.5rem;
+      font-size: 16px;
+    }
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.25rem;
+    }
+
+    .project {
+      padding: 1.25rem;
+      border-radius: 10px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      transition: all 0.2s ease;
+    }
+
+    .project:hover {
+      border-color: var(--accent);
+      background: var(--card);
+    }
+
+    .project h4 {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .project p {
+      margin: 0.5rem 0 0;
+      color: var(--text-muted);
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .project-links {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-top: 0.75rem;
+      font-size: 13px;
+    }
+
+    .project-links a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .project-links a:hover {
+      opacity: 0.7;
+    }
+
+    .project ul {
+      margin: 0.75rem 0 0;
+      padding-left: 1.25rem;
+      color: var(--text-muted);
+    }
+
+    .project li {
+      margin: 0.5rem 0;
+      font-size: 13px;
+    }
+
+    .project li a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .section-divider {
+      margin-top: 1rem;
+      padding-top: 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    aside h4 {
+      margin: 0 0 0.75rem;
+      font-size: 14px;
+    }
+
+    aside p {
+      margin: 0.5rem 0 0;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    aside a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    aside a:hover {
+      text-decoration: underline;
+    }
+
+    .stat-link {
+      margin-top: 0.75rem;
+    }
+
+    .stat-link img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .figma-gallery, .c-projects {
+      margin-top: 2rem;
+    }
+
+    .figma-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .figma-link {
+      padding: 1.5rem;
+      border-radius: 8px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      text-decoration: none;
+      color: var(--text);
+      text-align: center;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .figma-link:hover {
+      border-color: var(--accent);
+      background: var(--card);
+      color: var(--accent);
+    }
+
+    .c-projects ol {
+      margin: 1rem 0;
+      padding-left: 1.5rem;
+      color: var(--text-muted);
+    }
+
+    .c-projects li {
+      margin: 0.75rem 0;
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .c-projects a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .c-projects a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+      text-align: center;
+      color: var(--text-muted);
+      font-size: 13px;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    @media (max-width: 900px) {
+      .main-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .header-nav {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .figma-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .container {
+        padding: 1.5rem 1rem;
+      }
+
+      .avatar {
+        width: 64px;
+        height: 64px;
+        font-size: 22px;
+      }
+
+      header {
+        margin-bottom: 1.5rem;
+      }
+
+      .header-content h1 {
+        font-size: 22px;
+      }
+
+      .card {
+        padding: 1.5rem;
+      }
+
+      .project {
+        padding: 1rem;
+      }
+
+      .figma-grid {
+        grid-template-columns: 1fr;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+    }
   </style>
 </head>
 <body>
   <div class="container">
+    <!-- Header -->
     <header>
-      <div class="avatar">TM</div>
-      <div>
-        <h1>Tobechukwu Mamah <span style="color:var(--muted);font-weight:500">— Software Engineer</span></h1>
-        <p class="lead">Systems • Blockchain • DevOps • Full‑stack developer. I build reliable systems, scalable services, and clean interfaces.</p>
-        <div class="badges">
-          <a class="badge" href="/Tobechukwu_Mamah_CV.pdf" download>Download CV</a>
-          <a class="badge" href="https://www.linkedin.com/in/to/tobechi-paschal-1308a8192" style="text-decoration:none;color:inherit">LinkedIn</a>
-          <a class="badge" href="mailto:ptobechi@outlook.com" style="text-decoration:none;color:inherit">Email</a>
+      <div class="header-left">
+        <div class="avatar">TM</div>
+        <div class="header-content">
+          <h1>Tobechukwu Mamah</h1>
+          <p class="subtitle">Full-stack Software Engineer</p>
+          <p>Systems • Blockchain • DevOps • NestJS • React. I build reliable, scalable systems and clean interfaces.</p>
+          <div class="badges">
+            <a href="mailto:ptobechi@outlook.com" class="badge">Email</a>
+            <a href="https://www.linkedin.com/in/tobechi-paschal-1308a8192/" target="_blank" rel="noopener" class="badge">LinkedIn</a>
+            <a href="https://github.com/ptobechi" target="_blank" rel="noopener" class="badge">GitHub</a>
+            <a href="https://twitter.com/ptobechii" target="_blank" rel="noopener" class="badge">Twitter</a>
+          </div>
         </div>
       </div>
-      <nav class="toplinks">
-        <a href="#projects">Projects</a>
-        <a href="#figma">Figma</a>
-        <a href="#cprojects">ALX C</a>
+      <nav class="header-nav">
+        <nav>
+          <a href="#projects">Projects</a>
+          <a href="#figma" style="margin-left: 1.5rem;">Figma</a>
+          <a href="#systems" style="margin-left: 1.5rem;">Systems</a>
+        </nav>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+          <span id="themeIcon">🌙</span>
+        </button>
       </nav>
     </header>
 
-    <section class="grid" style="margin-top:22px">
-      <main class="card">
-        <h2 style="margin-top:0">Featured Projects</h2>
-        <div class="projects" id="projects">
+    <!-- Main Content -->
+    <div class="main-grid">
+      <main>
+        <section class="card" id="projects">
+          <h2>Featured Projects</h2>
+          <div class="projects-grid">
+            <!-- ETB Enterprise -->
+            <article class="project">
+              <h4>ETB Enterprise</h4>
+              <p>Business management platform with staff administration, payment processing, authentication, and workflow automation.</p>
+              <p style="color: var(--text-muted); font-size: 12px; margin-top: 0.5rem;">Tech: Next.js, NestJS, PostgreSQL, Stripe, TypeScript</p>
+              <div class="project-links">
+                <a href="https://etbenterprise.com" target="_blank" rel="noopener">Live</a>
+                <a href="https://www.figma.com/proto/9HoT3YnAXJhD0yIyOWXohD/ETB-enterprise?node-id=1-2&starting-point-node-id=1%3A2" target="_blank" rel="noopener">Figma</a>
+                <a href="https://github.com/ptobechi/etb-enterprise" target="_blank" rel="noopener">GitHub</a>
+              </div>
+            </article>
 
-          <article class="project">
-            <h4>ETB Enterprise — Business Management Platform</h4>
-            <p>End-to-end enterprise platform with staff management, payments, authentication, and workflow automation.</p>
-            <p style="margin-top:8px"><a href="https://etbenterprise.com" target="_blank" rel="noopener">Live Website</a> • <a href="https://www.figma.com/proto/9HoT3YnAXJhD0yIyOWXohD/ETB-enterprise?node-id=1-2&starting-point-node-id=1%3A2" target="_blank" rel="noopener">Figma</a> • <a href="https://github.com/ptobechi/etb-enterprise" target="_blank" rel="noopener">GitHub</a></p>
-          </article>
+            <!-- DrivenLuxe -->
+            <article class="project">
+              <h4>DrivenLuxe</h4>
+              <p>Luxury car rental platform with real-time booking, fleet management, and secure driver onboarding across mobile and web.</p>
+              <p style="color: var(--text-muted); font-size: 12px; margin-top: 0.5rem;">Tech: React Native, Node.js, MongoDB, Real-time APIs</p>
+              <div class="project-links">
+                <a href="https://www.figma.com/design/G4nU5HXJtNQ0I9fuMcqjS0/Drive-and-Luxe?node-id=3-4&t=ls3aEiowN65XqBLG-0" target="_blank" rel="noopener">Figma</a>
+                <a href="https://github.com/ptobechi/drivenluxe" target="_blank" rel="noopener">Frontend</a>
+                <a href="https://github.com/ptobechi/drivenluxe_backend" target="_blank" rel="noopener">Backend</a>
+              </div>
+            </article>
 
-          <article class="project">
-            <h4>DrivenLuxe — Luxury Car Rental Platform</h4>
-            <p>Cross-platform mobile ride-hailing experience with real-time booking, fleet administration, and secure onboarding.</p>
-            <p style="margin-top:8px"><a href="https://www.figma.com/design/G4nU5HXJtNQ0I9fuMcqjS0/Drive-and-Luxe?node-id=3-4&t=ls3aEiowN65XqBLG-0" target="_blank" rel="noopener">Figma</a> • <a href="https://github.com/ptobechi/drivenluxe_admin" target="_blank" rel="noopener">Admin</a> • <a href="https://github.com/ptobechi/drivenluxe_backend" target="_blank" rel="noopener">Backend</a> • <a href="https://github.com/ptobechi/drivenluxe" target="_blank" rel="noopener">Frontend</a></p>
-          </article>
+            <!-- Wokizy -->
+            <article class="project">
+              <h4>Wokizy</h4>
+              <p>Multi-vendor food delivery platform with vendor onboarding, order pipelines, admin controls, and customer-facing app.</p>
+              <p style="color: var(--text-muted); font-size: 12px; margin-top: 0.5rem;">Tech: React, Node.js, Express, MongoDB, Redux</p>
+              <div class="project-links">
+                <a href="https://www.figma.com/design/qIHVxw3J7201vjZxzhzhLf/Wokizy?node-id=90-1004&p=f&t=kQHV3ttOpKTS8YX9-0" target="_blank" rel="noopener">Figma</a>
+                <a href="https://github.com/ptobechi/wokizy" target="_blank" rel="noopener">Backend</a>
+                <a href="https://github.com/ptobechi/wokizy_landing" target="_blank" rel="noopener">Landing</a>
+              </div>
+            </article>
 
-          <article class="project">
-            <h4>Wokizy — Food Delivery & Vendor Management</h4>
-            <p>Modern multi-vendor food delivery app with admin tools, vendor onboarding, and order management pipelines.</p>
-            <p style="margin-top:8px"><a href="https://www.figma.com/design/qIHVxw3J7201vjZxzhzhLf/Wokizy?node-id=90-1004&p=f&t=kQHV3ttOpKTS8YX9-0" target="_blank" rel="noopener">Figma</a> • <a href="https://github.com/ptobechi/wokizy-admin" target="_blank" rel="noopener">Admin</a> • <a href="https://github.com/ptobechi/wokizy" target="_blank" rel="noopener">Backend</a> • <a href="https://github.com/ptobechi/wokizy_landing" target="_blank" rel="noopener">Landing</a></p>
-          </article>
+            <!-- ALX C Projects -->
+            <article class="project">
+              <h4>Systems Engineering</h4>
+              <p>Low-level C programming demonstrating memory management, parsing, process handling, and system tools.</p>
+              <p style="color: var(--text-muted); font-size: 12px; margin-top: 0.5rem;">Tech: C, Unix, System Calls, Data Structures</p>
+              <div class="project-links">
+                <a href="https://github.com/ptobechi/printf" target="_blank" rel="noopener">Printf</a>
+                <a href="https://github.com/ptobechi/simple_shell" target="_blank" rel="noopener">Shell</a>
+              </div>
+            </article>
+          </div>
 
-          <article class="project">
-            <h4>ALX C Projects — Systems Engineering</h4>
-            <p>Low-level engineering work demonstrating memory management, parsing, and system tools.</p>
-            <ul style="color:var(--muted);margin:8px 0 0;padding-left:18px">
-              <li><a href="#">printf</a> — Custom implementation using variadic functions and buffer management.</li>
-              <li><a href="#">simple_shell</a> — Custom shell with command parsing and process handling.</li>
-            </ul>
-          </article>
-
-        </div>
-
-        <div style="margin-top:14px">
-          <h3 style="margin-bottom:8px">About this Work</h3>
-          <p style="margin:0;color:var(--muted)">These projects show the range from product-driven full-stack systems to low-level C and scripting work that proves systems thinking and engineering fundamentals.</p>
-        </div>
+          <div class="section-divider">
+            <h3>About This Work</h3>
+            <p style="color: var(--text-muted); line-height: 1.6;">These projects demonstrate full-stack development across product-driven platforms (DrivenLuxe, Wokizy, ETB Enterprise) and systems-level engineering (C, shell utilities). I specialize in scalable architectures, API design with NestJS, modern frontend frameworks, and DevOps practices.</p>
+          </div>
+        </section>
       </main>
 
-      <aside class="card">
-        <div style="margin-bottom:12px">
-          <h3 style="margin:0">Profile & Stats</h3>
-          <p style="color:var(--muted);margin:6px 0 0">GitHub activity, languages, streaks</p>
-        </div>
-        <div class="stats">
-          <img src="https://github-readme-stats.vercel.app/api?username=ptobechi&show_icons=true&theme=transparent" alt="github-stats" />
-          <img style="margin-top:10px" src="https://github-readme-stats.vercel.app/api/top-langs/?username=ptobechi&layout=compact&langs_count=6&hide_border=true" alt="top-langs" />
-        </div>
+      <!-- Sidebar -->
+      <aside>
+        <div class="card">
+          <h3>GitHub Stats</h3>
+          <div class="stat-link">
+            <img src="https://github-readme-stats.vercel.app/api?username=ptobechi&show_icons=true&theme=transparent&hide_border=true" alt="GitHub Stats" />
+          </div>
+          <div class="stat-link">
+            <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ptobechi&layout=compact&langs_count=6&hide_border=true" alt="Top Languages" />
+          </div>
 
-        <div style="margin-top:16px">
-          <h4 style="margin:0 0 8px">Contact</h4>
-          <p style="margin:0"><a href="mailto:ptobechi@outlook.com">ptobechi@outlook.com</a></p>
-          <p style="margin:6px 0 0"><a href="https://twitter.com/ptobechii">@ptobechii</a></p>
-          <p style="margin:6px 0 0"><a href="https://www.linkedin.com/in/to/tobechi-paschal-1308a8192">LinkedIn</a></p>
-        </div>
-
-        <div style="margin-top:18px">
-          <h4 style="margin:0 0 8px">Quick Links</h4>
-          <p style="margin:0"><a href="#figma">Figma Gallery</a></p>
-          <p style="margin:6px 0 0"><a href="#cprojects">ALX C Repos</a></p>
-          <p style="margin:6px 0 0"><a href="/Tobechukwu_Mamah_CV.pdf" download>Download CV</a></p>
+          <div style="margin-top: 1.5rem; padding-top: 1rem; border-top: 1px solid var(--border);">
+            <h4>Quick Links</h4>
+            <p><a href="https://github.com/ptobechi" target="_blank" rel="noopener">GitHub Profile</a></p>
+            <p><a href="https://www.linkedin.com/in/tobechi-paschal-1308a8192/" target="_blank" rel="noopener">LinkedIn</a></p>
+            <p><a href="mailto:ptobechi@outlook.com">Email</a></p>
+            <p><a href="https://twitter.com/ptobechii" target="_blank" rel="noopener">Twitter</a></p>
+          </div>
         </div>
       </aside>
-    </section>
+    </div>
 
-    <section id="figma" style="margin-top:18px" class="card">
-      <h3>Design & Figma Gallery</h3>
-      <p style="color:var(--muted);margin-top:6px">Click thumbnails to open Figma projects.</p>
+    <!-- Figma Gallery Section -->
+    <section id="figma" class="card figma-gallery">
+      <h2>Design Gallery</h2>
+      <p style="color: var(--text-muted); margin-bottom: 1rem;">Figma designs for featured projects. Click to explore prototypes and design systems.</p>
       <div class="figma-grid">
-        <a class="fig-thumb" href="https://www.figma.com/proto/9HoT3YnAXJhD0yIyOWXohD/ETB-enterprise?node-id=1-2&starting-point-node-id=1%3A2" target="_blank" rel="noopener">ETB Enterprise</a>
-        <a class="fig-thumb" href="https://www.figma.com/design/G4nU5HXJtNQ0I9fuMcqjS0/Drive-and-Luxe?node-id=3-4&t=ls3aEiowN65XqBLG-0" target="_blank" rel="noopener">DrivenLuxe</a>
-        <a class="fig-thumb" href="https://www.figma.com/design/qIHVxw3J7201vjZxzhzhLf/Wokizy?node-id=90-1004&p=f&t=kQHV3ttOpKTS8YX9-0" target="_blank" rel="noopener">Wokizy</a>
+        <a class="figma-link" href="https://www.figma.com/proto/9HoT3YnAXJhD0yIyOWXohD/ETB-enterprise?node-id=1-2&starting-point-node-id=1%3A2" target="_blank" rel="noopener">
+          📊 ETB Enterprise
+        </a>
+        <a class="figma-link" href="https://www.figma.com/design/G4nU5HXJtNQ0I9fuMcqjS0/Drive-and-Luxe?node-id=3-4&t=ls3aEiowN65XqBLG-0" target="_blank" rel="noopener">
+          🚗 DrivenLuxe
+        </a>
+        <a class="figma-link" href="https://www.figma.com/design/qIHVxw3J7201vjZxzhzhLf/Wokizy?node-id=90-1004&p=f&t=kQHV3ttOpKTS8YX9-0" target="_blank" rel="noopener">
+          🍽️ Wokizy
+        </a>
       </div>
     </section>
 
-    <section id="cprojects" style="margin-top:18px" class="card">
-      <h3>ALX C Projects</h3>
-      <p style="color:var(--muted)">Feature your printf and shell projects with repo links and short notes.</p>
-      <ol style="color:var(--muted)">
-        <li><a href="https://github.com/ptobechi/printf">printf (repo)</a> — Custom printf implementation (variadic functions, buffer safety)</li>
-        <li><a href="https://github.com/ptobechi/simple_shell">simple_shell (repo)</a> — Custom shell with command parsing and process handling</li>
+    <!-- Systems Engineering Section -->
+    <section id="systems" class="card c-projects">
+      <h2>Systems Engineering</h2>
+      <p style="color: var(--text-muted); margin-bottom: 1rem;">Low-level programming projects showcasing C fundamentals, system calls, and memory management.</p>
+      <ol>
+        <li><strong><a href="https://github.com/ptobechi/printf" target="_blank" rel="noopener">Printf</a></strong> — Custom printf implementation using variadic functions, format specifiers, and buffer management.</li>
+        <li><strong><a href="https://github.com/ptobechi/simple_shell" target="_blank" rel="noopener">Simple Shell</a></strong> — POSIX-compliant shell with command parsing, process execution, and environment variable handling.</li>
       </ol>
     </section>
 
+    <!-- Footer -->
     <footer>
-      © <span id="year">2025</span> Tobechukwu Mamah — Built with ❤️ • Deploy via GitHub Pages
+      <p>© <span id="year">2025</span> Tobechukwu Mamah — Full-stack Engineer • <a href="https://github.com/ptobechi" target="_blank" rel="noopener">GitHub</a></p>
     </footer>
   </div>
 
   <script>
+    // Theme Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = document.getElementById('themeIcon');
+    const htmlElement = document.documentElement;
+
+    // Initialize theme
+    function initTheme() {
+      const savedTheme = localStorage.getItem('portfolio-theme') || 'light';
+      setTheme(savedTheme);
+    }
+
+    function setTheme(theme) {
+      if (theme === 'dark') {
+        htmlElement.setAttribute('data-theme', 'dark');
+        themeIcon.textContent = '☀️';
+        localStorage.setItem('portfolio-theme', 'dark');
+      } else {
+        htmlElement.removeAttribute('data-theme');
+        themeIcon.textContent = '🌙';
+        localStorage.setItem('portfolio-theme', 'light');
+      }
+    }
+
+    themeToggle.addEventListener('click', () => {
+      const currentTheme = htmlElement.getAttribute('data-theme') || 'light';
+      const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+      setTheme(newTheme);
+    });
+
+    // Set year in footer
     document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Initialize
+    initTheme();
   </script>
 </body>
 </html>

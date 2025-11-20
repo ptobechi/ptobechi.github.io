@@ -1,24 +1,11 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely edit after that. If you find
-# yourself editing this file very often, consider using Jekyll's data files
-# feature for the data you need to update frequently.
-#
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
-# These are used to personalize your new site. If you look in the HTML files,
-# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
-# You can create any custom variable you would like, and they will be accessible
-# in the templates via {{ site.myvariable }}.
-title: Martins Ugwu
-email: martinsbuchie@gmail.com
-description: >- # this means to ignore newlines until "baseurl:"
-  I'm experienced Remote Sensing, GIS, and full-stack software developer, with a proven track record of leveraging Copernicus data and EO*GI services to support informed decision-making. I am eager to further my career through a fully funded scholarship, aiming to deepen my expertise in geospatial technology and Earth observation while focusing on applying programming tools to enhance analytical processes and operational efficiency.
-twitter_username: martinsbuchie
-github_username: martinsbuchi2
+# Site settings (personalized for Tobechukwu Mamah)
+title: "Tobechukwu Mamah"
+email: ptobechi@outlook.com
+description: >-
+  Software Engineer — Full-stack & Systems Developer. I build reliable systems,
+  scalable services, and clean interfaces. Interests: Blockchain, DevOps, Systems Engineering.
+twitter_username: ptobechii
+github_username: ptobechi
 minimal_mistakes_skin: default
 search: false
 
@@ -27,26 +14,14 @@ markdown: kramdown
 remote_theme: mmistakes/minimal-mistakes
 # Outputting
 permalink: /:categories/:title/
-paginate: 5 # amount of posts to show
+paginate: 5
 paginate_path: /page:num/
-timezone: # https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Africa/Lagos
 
 include:
   - _pages
 
-# Exclude from processing.
-# The following items will not be processed, by default. Create a custom list
-# to override the default setting.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
-
-# Plugins (previously gems:)
+# Plugins
 plugins:
   - jekyll-paginate
   - jekyll-sitemap
@@ -56,40 +31,39 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "Martins Ibuchukwu Ugwu"
-  avatar : "/assets/images/profile_photo.JPG"
-  bio    : "Remote Sensing, Earth Observation & GIS Services <br />   <br /> SDG 7 & 13 <br />  <br /> 📍Abuja, Nigeria | "
+  name: "Tobechukwu Mamah"
+  avatar: "/assets/images/avatar.jpg"        # change to your avatar filename
+  bio: "Software Engineer • Full-stack & Systems • Blockchain interest • DevOps-inclined<br />📍Lagos, Nigeria"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
-      url: "mailto:martinsbuchie@gmail.com"
+      url: "mailto:ptobechi@outlook.com"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
-      url: "https://github.com/martinsbuchi2"
-    - label: "Linkedin"
+      url: "https://github.com/ptobechi"
+    - label: "LinkedIn"
       icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/martinsugwu"
-    - label: "Hashnode"
-      icon: "fab fa-fw fa-hashnode"
-      url: "https://martins-corner.hashnode.dev/"
-    - label: "Medium"
-      icon: "fab fa-fw fa-medium"
-      url: "https://medium.com/@martinsbuchie"
+      url: "https://www.linkedin.com/in/to/tobechi-paschal-1308a8192"
+    - label: "Twitter"
+      icon: "fab fa-fw fa-twitter"
+      url: "https://twitter.com/ptobechii"
+    - label: "CV"
+      icon: "fas fa-fw fa-file"
+      url: "/cv.html"
 
 footer:
   links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/ptobechi"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/to/tobechi-paschal-1308a8192"
     - label: "Twitter"
-      icon: "fab fa-fw fa-twitter-square"
-      url: "https://x.com/martinsbuchie"
-    - label: "Facebook"
-      icon: "fab fa-fw fa-facebook"
-      url: "https://facebook.com/1buchim"
-    - label: "Instagram"
-      icon: "fab fa-fw fa-instagram"
-      url: "https://instagram.com/1buuchim"
+      icon: "fab fa-fw fa-twitter"
+      url: "https://twitter.com/ptobechii"
 
 defaults:
-  # _posts
   - scope:
       path: ""
       type: posts
@@ -100,7 +74,7 @@ defaults:
       comments: true
       share: true
       related: true
-  # _pages
+
   - scope:
       path: "_pages"
       type: pages
@@ -111,6 +85,7 @@ defaults:
 category_archive:
   type: liquid
   path: /categories/
+
 tag_archive:
   type: liquid
   path: /tags/

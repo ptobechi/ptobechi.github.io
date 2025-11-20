@@ -3,51 +3,54 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Tobechukwu — Software Engineer</title>
-  <meta name="description" content="Tobechukwu — Software Engineer. Systems, Blockchain, DevOps, Full-stack developer. Portfolio & projects." />
+  <title>Tobechukwu Mamah — Software Engineer</title>
+  <meta name="description" content="Tobechukwu Mamah — Software Engineer. Systems, Blockchain, DevOps, Full-stack developer. Portfolio & projects." />
   <style>
-    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#4f46e5;--glass:rgba(255,255,255,0.04)}
+    :root{--bg:#000;--card:#0f0f0f;--muted:#cfcfcf;--glass:rgba(255,255,255,0.03);--accent:#ffffff}
     *{box-sizing:border-box}
-    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;color:#e6eef6;background:linear-gradient(180deg,#071428 0%, #071b2a 100%);-webkit-font-smoothing:antialiased}
-    .container{max-width:1000px;margin:36px auto;padding:28px}
+    html,body{height:100%}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;color:var(--accent);background:var(--bg);-webkit-font-smoothing:antialiased}
+    .container{max-width:1100px;margin:28px auto;padding:22px}
     header{display:flex;align-items:center;gap:18px}
-    .avatar{width:96px;height:96px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#06b6d4);display:flex;align-items:center;justify-content:center;color:white;font-weight:700;font-size:28px}
-    h1{margin:0;font-size:28px}
-    p.lead{margin:6px 0 0;color:var(--muted)}
+    .avatar{width:84px;height:84px;border-radius:12px;background:#111;display:flex;align-items:center;justify-content:center;color:var(--accent);font-weight:700;font-size:28px;border:1px solid rgba(255,255,255,0.06)}
+    h1{margin:0;font-size:26px}
+    p.lead{margin:6px 0 0;color:var(--muted);line-height:1.4}
     .badges{margin-top:12px;display:flex;gap:8px;flex-wrap:wrap}
-    .badge{background:var(--glass);padding:6px 10px;border-radius:8px;font-size:13px;color:var(--muted)}
+    .badge{background:transparent;padding:6px 10px;border-radius:8px;font-size:13px;color:var(--muted);border:1px solid rgba(255,255,255,0.06)}
     nav.toplinks{margin-left:auto}
     nav a{color:var(--muted);text-decoration:none;margin-left:12px}
 
     /* hero cards */
-    .grid{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:22px}
-    .card{background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;box-shadow:0 6px 18px rgba(2,6,23,0.6);}
+    .grid{display:grid;grid-template-columns:1fr 340px;gap:18px;margin-top:22px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.04);}
     .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-    .project{padding:12px;border-radius:10px;background:rgba(255,255,255,0.02);border:1px solid rgba(255,255,255,0.02)}
+    .project{padding:12px;border-radius:10px;background:transparent;border:1px solid rgba(255,255,255,0.03)}
     .project h4{margin:0 0 6px;font-size:15px}
     .project p{margin:0;color:var(--muted);font-size:13px}
-    aside .stats img{width:100%}
+    aside .stats img{width:100%;border-radius:8px}
 
     /* figma gallery */
     .figma-grid{display:flex;gap:12px;flex-wrap:wrap}
-    .fig-thumb{width:150px;height:100px;border-radius:8px;background:#071533;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:12px}
+    .fig-thumb{width:150px;height:100px;border-radius:8px;background:#0b0b0b;display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:13px;border:1px solid rgba(255,255,255,0.03);text-decoration:none}
 
     footer{margin-top:28px;color:var(--muted);font-size:13px;text-align:center}
 
+    a{color:var(--accent)}
+
     /* responsive */
-    @media (max-width:880px){.grid{grid-template-columns:1fr}.projects{grid-template-columns:1fr}}
+    @media (max-width:980px){.grid{grid-template-columns:1fr}.projects{grid-template-columns:1fr}}
+    @media (max-width:520px){.avatar{width:64px;height:64px;font-size:22px}.project{padding:10px}.fig-thumb{width:120px;height:84px}}
   </style>
 </head>
 <body>
   <div class="container">
     <header>
-      <div class="avatar">TP</div>
+      <div class="avatar">TM</div>
       <div>
-        <h1>Tobechukwu <span style="color:var(--accent);font-weight:600">— Software Engineer</span></h1>
-        <p class="lead">Systems • Blockchain • DevOps • Full‑stack developer. I build reliable systems and elegant interfaces.</p>
+        <h1>Tobechukwu Mamah <span style="color:var(--muted);font-weight:500">— Software Engineer</span></h1>
+        <p class="lead">Systems • Blockchain • DevOps • Full‑stack developer. I build reliable systems, scalable services, and clean interfaces.</p>
         <div class="badges">
-          <span class="badge">Open to collaboration</span>
-          <span class="badge">Interested: Blockchain & Systems Engineering</span>
+          <a class="badge" href="/Tobechukwu_Mamah_CV.pdf" download>Download CV</a>
           <a class="badge" href="https://www.linkedin.com/in/to/tobechi-paschal-1308a8192" style="text-decoration:none;color:inherit">LinkedIn</a>
           <a class="badge" href="mailto:ptobechi@outlook.com" style="text-decoration:none;color:inherit">Email</a>
         </div>
@@ -66,40 +69,36 @@
 
           <article class="project">
             <h4>ETB Enterprise — Business Management Platform</h4>
-            <p>End‑to‑end enterprise platform with staff management, payments, authentication, and workflow automation.</p>
-            <p><a href="https://etbenterprise.com">Live Website</a> • <a href="https://www.figma.com/proto/9HoT3YnAXJhD0yIyOWXohD/ETB-enterprise?node-id=1-2&starting-point-node-id=1%3A2">Figma</a> • <a href="https://github.com/ptobechi/etb-enterprise">GitHub Repo</a></p>
+            <p>End-to-end enterprise platform with staff management, payments, authentication, and workflow automation.</p>
+            <p style="margin-top:8px"><a href="https://etbenterprise.com" target="_blank" rel="noopener">Live Website</a> • <a href="https://www.figma.com/proto/9HoT3YnAXJhD0yIyOWXohD/ETB-enterprise?node-id=1-2&starting-point-node-id=1%3A2" target="_blank" rel="noopener">Figma</a> • <a href="https://github.com/ptobechi/etb-enterprise" target="_blank" rel="noopener">GitHub</a></p>
           </article>
 
           <article class="project">
             <h4>DrivenLuxe — Luxury Car Rental Platform</h4>
-            <p>Cross‑platform mobile ride‑hailing experience with real‑time booking, fleet administration, and secure onboarding.</p>
-            <p><a href="https://www.figma.com/design/G4nU5HXJtNQ0I9fuMcqjS0/Drive-and-Luxe?node-id=3-4&t=ls3aEiowN65XqBLG-0">Figma</a> • <a href="https://github.com/ptobechi/drivenluxe_admin">Admin Repo</a> • <a href="https://github.com/ptobechi/drivenluxe_backend">Backend Repo</a> • <a href="https://github.com/ptobechi/drivenluxe">Frontend Repo</a></p>
+            <p>Cross-platform mobile ride-hailing experience with real-time booking, fleet administration, and secure onboarding.</p>
+            <p style="margin-top:8px"><a href="https://www.figma.com/design/G4nU5HXJtNQ0I9fuMcqjS0/Drive-and-Luxe?node-id=3-4&t=ls3aEiowN65XqBLG-0" target="_blank" rel="noopener">Figma</a> • <a href="https://github.com/ptobechi/drivenluxe_admin" target="_blank" rel="noopener">Admin</a> • <a href="https://github.com/ptobechi/drivenluxe_backend" target="_blank" rel="noopener">Backend</a> • <a href="https://github.com/ptobechi/drivenluxe" target="_blank" rel="noopener">Frontend</a></p>
           </article>
 
           <article class="project">
             <h4>Wokizy — Food Delivery & Vendor Management</h4>
-            <p>Modern multi‑vendor food delivery app with admin tools, vendor onboarding, and order management pipelines.</p>
-            <p><a href="https://www.figma.com/design/qIHVxw3J7201vjZxzhzhLf/Wokizy?node-id=90-1004&p=f&t=kQHV3ttOpKTS8YX9-0">Figma</a> • <a href="https://github.com/ptobechi/wokizy-admin">Admin Repo</a> • <a href="https://github.com/ptobechi/wokizy">Backend Repo</a> • <a href="https://github.com/ptobechi/wokizy_landing">Landing Repo</a></p>
+            <p>Modern multi-vendor food delivery app with admin tools, vendor onboarding, and order management pipelines.</p>
+            <p style="margin-top:8px"><a href="https://www.figma.com/design/qIHVxw3J7201vjZxzhzhLf/Wokizy?node-id=90-1004&p=f&t=kQHV3ttOpKTS8YX9-0" target="_blank" rel="noopener">Figma</a> • <a href="https://github.com/ptobechi/wokizy-admin" target="_blank" rel="noopener">Admin</a> • <a href="https://github.com/ptobechi/wokizy" target="_blank" rel="noopener">Backend</a> • <a href="https://github.com/ptobechi/wokizy_landing" target="_blank" rel="noopener">Landing</a></p>
           </article>
 
           <article class="project">
             <h4>ALX C Projects — Systems Engineering</h4>
-            <p>Low‑level engineering work including custom C libraries and shell utilities.</p>
-            <ul style="color:var(--muted)">
+            <p>Low-level engineering work demonstrating memory management, parsing, and system tools.</p>
+            <ul style="color:var(--muted);margin:8px 0 0;padding-left:18px">
               <li><a href="#">printf</a> — Custom implementation using variadic functions and buffer management.</li>
-              <li><a href="#">Shell Scripts</a> — Bash automation utilities and Linux system tools.</li>
+              <li><a href="#">simple_shell</a> — Custom shell with command parsing and process handling.</li>
             </ul>
           </article>
 
         </div>
 
         <div style="margin-top:14px">
-          <h3 style="margin-bottom:8px">ALX & Low-level Work</h3>
-          <p class="lead" style="margin:0 0 8px;color:var(--muted)">Showcasing C projects and Bash utilities demonstrating systems-level expertise.</p>
-          <ul style="color:var(--muted)">
-            <li><strong>printf</strong> — Custom implementation showcasing variadic parsing & buffer handling.</li>
-            <li><strong>Shell utilities</strong> — Bash scripts for automation and system tasks.</li>
-          </ul>
+          <h3 style="margin-bottom:8px">About this Work</h3>
+          <p style="margin:0;color:var(--muted)">These projects show the range from product-driven full-stack systems to low-level C and scripting work that proves systems thinking and engineering fundamentals.</p>
         </div>
       </main>
 
@@ -124,17 +123,18 @@
           <h4 style="margin:0 0 8px">Quick Links</h4>
           <p style="margin:0"><a href="#figma">Figma Gallery</a></p>
           <p style="margin:6px 0 0"><a href="#cprojects">ALX C Repos</a></p>
+          <p style="margin:6px 0 0"><a href="/Tobechukwu_Mamah_CV.pdf" download>Download CV</a></p>
         </div>
       </aside>
     </section>
 
     <section id="figma" style="margin-top:18px" class="card">
       <h3>Design & Figma Gallery</h3>
-      <p style="color:var(--muted);margin-top:6px">Click the thumbnails to open Figma projects (replace placeholders with your real links).</p>
+      <p style="color:var(--muted);margin-top:6px">Click thumbnails to open Figma projects.</p>
       <div class="figma-grid">
-        <a class="fig-thumb" href="#" aria-label="DrivenLuxe UI">DrivenLuxe UI</a>
-        <a class="fig-thumb" href="#" aria-label="Market Dashboard">Market Dashboard</a>
-        <a class="fig-thumb" href="#" aria-label="Wallet App">Wallet App</a>
+        <a class="fig-thumb" href="https://www.figma.com/proto/9HoT3YnAXJhD0yIyOWXohD/ETB-enterprise?node-id=1-2&starting-point-node-id=1%3A2" target="_blank" rel="noopener">ETB Enterprise</a>
+        <a class="fig-thumb" href="https://www.figma.com/design/G4nU5HXJtNQ0I9fuMcqjS0/Drive-and-Luxe?node-id=3-4&t=ls3aEiowN65XqBLG-0" target="_blank" rel="noopener">DrivenLuxe</a>
+        <a class="fig-thumb" href="https://www.figma.com/design/qIHVxw3J7201vjZxzhzhLf/Wokizy?node-id=90-1004&p=f&t=kQHV3ttOpKTS8YX9-0" target="_blank" rel="noopener">Wokizy</a>
       </div>
     </section>
 
@@ -142,13 +142,13 @@
       <h3>ALX C Projects</h3>
       <p style="color:var(--muted)">Feature your printf and shell projects with repo links and short notes.</p>
       <ol style="color:var(--muted)">
-        <li><a href="#">printf (repo link)</a> — Custom printf implementation (variadic functions, buffer safety)</li>
-        <li><a href="#">simple_shell (repo link)</a> — Custom shell with command parsing and process handling</li>
+        <li><a href="https://github.com/ptobechi/printf">printf (repo)</a> — Custom printf implementation (variadic functions, buffer safety)</li>
+        <li><a href="https://github.com/ptobechi/simple_shell">simple_shell (repo)</a> — Custom shell with command parsing and process handling</li>
       </ol>
     </section>
 
     <footer>
-      © <span id="year">2025</span> Tobechukwu — Built with ❤️ • Deploy via GitHub Pages
+      © <span id="year">2025</span> Tobechukwu Mamah — Built with ❤️ • Deploy via GitHub Pages
     </footer>
   </div>
 

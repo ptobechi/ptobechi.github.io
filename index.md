@@ -5,50 +5,75 @@ layout: single
 classes: wide
 header:
     overlay_image: /assets/images/header_photo_small.jpg
-    caption: Jabi Lake, Abuja, Nigeria 
+    caption: Lagos, Nigeria
 excerpt: ''
 ---
 
-I’m experienced Remote Sensing and GIS expert, with a proven track record of leveraging Integrated Programming, Earth Observation and GIS services to support informed decision-making. I am intellectually curious, a fast learner, result-oriented, intuitively data-driven, and desire opportunity to deepen my expertise and make an even more profound impact in society.
+I’m a Software Engineer with strong experience in **systems engineering**, **full-stack development**, **cloud automation**, and emerging interests in **DevOps** and **blockchain technologies**. I’m deeply committed to building reliable systems, scalable architectures, and clean, maintainable software.  
 
-### Recent Events: Conferences | Workshops | Courses & Training
-### See [the Relevant Certificates & Recognitions](https://drive.google.com/file/d/1RHp71xfsW_uHDJtACXqliOICnyUUf80X/view?usp=sharing)
+I enjoy exploring the intersection of backend engineering, security, infrastructure, and user-centered product design.  
+Driven by curiosity and continuous learning, I work on projects that strengthen performance, reliability, and real-world usability.
 
+---
 
- **`2025:`**
+## Recent Work, Learning & Engineering Milestones  
+### *(Projects, Courses, Workshops, Systems Engineering Work)*
 
-* **February:** In line with REA's efforts to diversify her renewable energy portfolio, particularly Small Hydropower Generation, I'm happy to announce my nomination for the [International Centre for Hydropower (ICH)](https://ich.no/) [Leadership in Dam Safety Seminar](https://drive.google.com/file/d/1BqrJ9TK-PV12YWvH1RAN6U6giX5gW4nT/view?usp=sharing) in Cape Town, South Africa, from 10–14 February 2025, sponsored by the Norwegian Embassy. I'm grateful for this opportunity to contribute to Africa's sustainable energy future!
-* **January:** I'm excited to announce my enrollment in the [Geographic Software Design](https://geog-510.gishub.org/) course by the University of Tennessee, Knoxville! This program will enhance my skills in open-source Python development for geospatial analysis and interactive mapping, fostering my contributions to the open-source community.
-  - Causually creating my first [Python Package (on PYPI)](https://martinsbuchi2.github.io/GeoNite/) to visualize global nightlight.
+**`2025:`**
 
- **`2024:`**
+- **February:** Strengthening my systems engineering and security skills while working on a cross-platform Remote Access Tool built in **Go**, designed for multi-OS execution and modular command pipelines.  
+- **January:** Began building a full **Next.js Admin System** with Prisma, MongoDB, and role-based access control for managing users, wallets, transactions, and investment plans.  
+  - Expanded the system to include wallet automation, staking modules, and server-side user management patterns.
 
-* **November - December:** Excited to enroll for Cloud Computing and Algorithms for EO analyses. This [EO Africa (Research & Development Facility)](https://www.eoafrica-rd.org/) course will provide hands-on experience with cloud computing platforms and significantly improve my ability to handle large-scale EO datasets and enhance data-driven decision-making.
-* **September:** Participated in the 2024 Environmental Conference tagged: *Harmony in Sustainability, Nurturing Environmental Visionaries*.
-* **June:** Participated and Successfully Completed the "Uncertainty Analysis for Energy System Studies" course, held by EIT HEI Initiative and Organized by the Technical University of Denmark.
-* **June:** The United Nations Environment Programme (UNEP) recognition for joining the **#GenerationRestoration** movement and making World Environment Day 2024 a huge success.
+---
+
+**`2024:`**
+
+- **December:** Advanced full-stack capabilities through complex dashboard development, including a **live stock & crypto analytics system** integrating multiple market APIs (Yahoo Finance, Finnhub, Alpha Vantage).  
+- **September – November:** Deepened cloud computing and backend automation knowledge while working with server-side rendering, database optimization, rate-limited API orchestration, and secure authentication flows.  
+- **June – August:** Completed major ALX engineering modules including:  
+  - **Custom `printf` implementation in C**  
+  - **Linux shell utilities**, Bash scripting, memory handling, pointer management, and low-level debugging with Valgrind.
+
+---
 
 **`2023:`**
 
-* **December:** Completed the 13-week Global Youth Climate Training, through the Global Youth Coalition
-* **November:** Completed the VIDA software training on Nigeria Energy Geospatial Platform for Distributed Access to Renewable Energy Scale-up (DARES).
-* **November:** NASRDA 2023 GIS Day Celebration, Theme: GIS for Executives
-* **October:** Joined the Sixth Edition of The Social Town Talk Series - International Carbon Conference supported by Neem Software.
-* **September:** Joined 8th edition of International Youth Conference (IYC) held in hybrid format in New York City, USA. under the theme *"Empowering Youth to Achieve the Sustainable Development Goals"* in partnership with UN-Habitat and Global Civil Society Organizations.
+- Grew foundational engineering skills across C, shell scripting, algorithms, and systems programming—building the groundwork that now supports backend engineering, DevOps, and cloud-native development.  
+- Participated in collaborative open-source work and educational sprints that strengthened debugging discipline, code documentation, and collaborative coding workflows (Git, GitHub, CI basics).
+
+---
 
 **`2022:`**
 
-* **November:** NASRDA 2022 GIS Day Celebration.
-* **June:** Joine as a deligate at the Conferenece of Youth on Environment and Climate (COYEC) under the theme Youth-Led Actions for Climate Resilience and Sustainable Development.
-* **June:** World Environment Day Conference.
+- Joined the ALX Software Engineering Program, beginning formal training in:  
+  - C programming  
+  - Data structures  
+  - Shell scripting  
+  - Low-level algorithmic thinking  
+  - Systems fundamentals  
+- Started building early personal projects with Python, JavaScript, and REST APIs, forming the base of my full-stack trajectory.
 
+---
 
+## Additional Highlights
 
-<!-- * **Januray 2024:** Our OpenET benchmark paper, where I'm a co-author, is published at [Nature Water](https://www.nature.com/articles/s44221-023-00181-7), offering rigorous assesmsnet of satellite-derived evapotranspiration for resources management.
-* **December 2023:** For the second year in a row, hosted our innovative session on "Emerging Machine Learning Approaches for Process Understanding in Ecosystem Sciences" at AGU.
-* **December 2023:** Presented our CEDAR-GPP dataset at the AGU, offering vital spatiotemporal estimates of GPP that incorporates the CO2 fertilization effect.
-* **October 2023:** Our preprint, “CEDAR-GPP: Spatiotemporally Upscaled Estimates of Gross Primary Productivity Incorporating CO2 Fertilization,” is now under discussion at _[Earth System Science Data](https://essd.copernicus.org/preprints/essd-2023-337/)_.
-* **September 2023:** Excited to announce our preprint, “Using Automated Machine Learning for the Upscaling of Gross Primary Productivity,” is currently under discussion at _[Biogeosciences](https://bg.copernicus.org/preprints/bg-2023-141/)_.
-* **August 2023:** Presented our recent findings on atmospheric CO2 impacts on global photosynthesis at the _ESA Annual Meeting_ in Portland, Oregon.
-* **July 2023:** Delivered a presentation on our work and perspectives on high-resolution satellite LAI data products at _IGARSS 2023_ in Pasadena, CA.
-* **June 2023:** A team of master's students under my guidance presented our collaborative work, _"Upscaling Global Hourly GPP with Temporal Fusion Transformer,"_ at the CVPR MultiEarth 2023 Workshop. [paper](link) -->
+- Developing **DrivenLuxe**, a full ride-hailing platform with authentication, user onboarding, admin interfaces, and React Native mobile screens.  
+- Actively creating modern UI/UX concepts on **Figma** for dashboards, fintech products, logistics tools, and system interfaces.  
+- Building a portfolio of backend, security, and DevOps experiments including:  
+  - MX record lookups  
+  - Email automation and DNS tooling  
+  - Firewalls, server configs, and Linux setups  
+- Consistently improving cloud deployment, containerization, scaling strategies, and infrastructure-as-code patterns.
+
+---
+
+If you’d like, I can add:
+- A **Projects** carousel  
+- A **Figma UI Gallery** section  
+- A **Tech Stack** module  
+- A GitHub stats panel  
+- A more polished intro with a tagline or mission statement
+
+**Q1**  
+**Do you want a section added that showcases your key projects (DrivenLuxe, Market Dashboard, Admin System, ALX C projects) with thumbnails and descriptions?**

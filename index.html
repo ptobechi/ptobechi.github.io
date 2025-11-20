@@ -7,96 +7,93 @@
   <title>Tobechukwu Mamah — Full-Stack Software Engineer</title>
   <meta name="description" content="Full-stack software engineer specializing in systems engineering, NestJS, React, and scalable cloud architecture. Portfolio featuring DrivenLuxe, Wokizy, and ETB Enterprise." />
   <style>
-    :root {
-      --bg: #ffffff;
-      --card: #f5f5f5;
-      --text: #1a1a1a;
-      --text-muted: #666666;
-      --border: #e5e5e5;
-      --glass: rgba(0, 0, 0, 0.02);
-      --accent: #2563eb;
-      --accent-hover: #1d4ed8;
-      --primary-foreground: #ffffff;
-    }
-
-    html[data-theme="dark"] {
-      --bg: #0a0a0a;
-      --card: #121212;
-      --text: #ffffff;
-      --text-muted: #a0a0a0;
-      --border: #333333;
-      --glass: rgba(255, 255, 255, 0.02);
-      --accent: #60a5fa;
-      --accent-hover: #3b82f6;
-    }
-
     * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
     }
 
-    html, body {
-      margin: 0;
-      padding: 0;
+    :root {
+      /* Light theme (default) */
+      --background: hsl(0 0% 98%);
+      --foreground: hsl(0 0% 9%);
+      --card: hsl(0 0% 100%);
+      --card-foreground: hsl(0 0% 9%);
+      --primary: hsl(220 90% 45%);
+      --primary-foreground: hsl(0 0% 100%);
+      --secondary: hsl(0 0% 96%);
+      --secondary-foreground: hsl(0 0% 15%);
+      --muted: hsl(0 0% 65%);
+      --muted-foreground: hsl(0 0% 50%);
+      --accent: hsl(220 90% 45%);
+      --accent-foreground: hsl(0 0% 100%);
+      --border: hsl(0 0% 90%);
+      --ring: hsl(220 90% 45%);
+    }
+
+    html[data-theme="dark"] {
+      --background: hsl(0 0% 5%);
+      --foreground: hsl(0 0% 95%);
+      --card: hsl(0 0% 8%);
+      --card-foreground: hsl(0 0% 95%);
+      --primary: hsl(220 75% 60%);
+      --primary-foreground: hsl(0 0% 95%);
+      --secondary: hsl(0 0% 12%);
+      --secondary-foreground: hsl(0 0% 95%);
+      --muted: hsl(0 0% 55%);
+      --muted-foreground: hsl(0 0% 65%);
+      --accent: hsl(220 75% 60%);
+      --accent-foreground: hsl(0 0% 95%);
+      --border: hsl(0 0% 18%);
+      --ring: hsl(220 75% 60%);
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-      color: var(--text);
-      background: var(--bg);
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background-color: var(--background);
+      color: var(--foreground);
+      transition: background-color 0.3s ease, color 0.3s ease;
       -webkit-font-smoothing: antialiased;
       -moz-osx-font-smoothing: grayscale;
-      transition: background-color 0.3s ease, color 0.3s ease;
+      line-height: 1.6;
     }
 
     .container {
-      max-width: 1280px;
+      max-width: 1536px;
       margin: 0 auto;
       padding: 0 1rem;
     }
 
+    /* Header */
     header {
+      border-bottom: 1px solid var(--border);
+      background-color: rgb(255 255 255 / 0.3);
+      backdrop-filter: blur(10px);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+    }
+
+    .header-content {
+      max-width: 1536px;
+      margin: 0 auto;
+      padding: 1.5rem;
       display: flex;
       align-items: center;
       justify-content: space-between;
-      gap: 2rem;
-      padding: 1.5rem 0;
-      border-bottom: 1px solid var(--border);
-      flex-wrap: wrap;
     }
 
-    .header-left {
-      display: flex;
-      align-items: center;
-      gap: 1.5rem;
-      flex: 1;
-      min-width: 0;
-    }
-
-    .avatar {
-      width: 48px;
-      height: 48px;
-      border-radius: 8px;
-      background: var(--card);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent);
+    .header-left h1 {
+      font-size: 1.5rem;
       font-weight: 700;
-      font-size: 18px;
-      border: 1.5px solid var(--accent);
-      flex-shrink: 0;
+      letter-spacing: -0.02em;
+      color: var(--foreground);
     }
 
-    .header-content h1 {
-      margin: 0;
-      font-size: 18px;
-      font-weight: 600;
-    }
-
-    .header-content p {
-      margin: 0.25rem 0 0;
-      color: var(--text-muted);
-      font-size: 13px;
+    .header-left p {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+      margin-top: 0.25rem;
     }
 
     .header-nav {
@@ -108,116 +105,104 @@
     .nav-links {
       display: flex;
       gap: 2rem;
-      align-items: center;
     }
 
     .nav-links a {
-      color: var(--text);
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
       text-decoration: none;
-      font-size: 14px;
-      transition: color 0.2s ease;
+      transition: color 0.2s;
     }
 
     .nav-links a:hover {
-      color: var(--accent);
+      color: var(--foreground);
+    }
+
+    .social-links {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .social-links a {
+      color: var(--muted-foreground);
+      text-decoration: none;
+      transition: color 0.2s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.25rem;
+      height: 1.25rem;
+    }
+
+    .social-links a:hover {
+      color: var(--foreground);
     }
 
     .theme-toggle {
       background: none;
-      border: 1px solid var(--border);
-      padding: 0.5rem 0.75rem;
-      border-radius: 6px;
+      border: none;
+      padding: 0.5rem;
       cursor: pointer;
-      color: var(--text);
-      display: flex;
+      color: var(--muted-foreground);
+      font-size: 1rem;
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 16px;
-      transition: all 0.2s ease;
+      border-radius: 0.375rem;
+      transition: all 0.2s;
+      width: 1.25rem;
+      height: 1.25rem;
     }
 
     .theme-toggle:hover {
-      border-color: var(--accent);
-      background: var(--glass);
+      color: var(--foreground);
+      background-color: var(--secondary);
     }
 
+    /* Main */
     main {
       padding: 2rem 0;
     }
 
-    section {
+    /* Hero Section */
+    .hero {
       margin-bottom: 3rem;
     }
 
-    section h2 {
-      font-size: 28px;
+    .hero h2 {
+      font-size: 2rem;
       font-weight: 700;
-      margin: 0 0 0.5rem;
-      text-wrap: balance;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+      word-wrap: break-word;
     }
 
-    section > p {
-      color: var(--text-muted);
-      font-size: 16px;
+    .hero > p {
+      font-size: 1.125rem;
+      color: var(--muted-foreground);
       line-height: 1.6;
-      margin: 0 0 2rem;
-      max-width: 500px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
-      margin: 2rem 0 3rem;
-    }
-
-    .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      padding: 0.625rem 1.5rem;
-      border-radius: 6px;
-      font-size: 14px;
-      font-weight: 500;
-      text-decoration: none;
-      transition: all 0.2s ease;
-      cursor: pointer;
-      border: 1px solid transparent;
-    }
-
-    .btn-primary {
-      background: var(--accent);
-      color: var(--primary-foreground);
-      border-color: var(--accent);
-    }
-
-    .btn-primary:hover {
-      opacity: 0.9;
-    }
-
-    .btn-secondary {
-      background: transparent;
-      color: var(--text);
-      border-color: var(--border);
-    }
-
-    .btn-secondary:hover {
-      background: var(--card);
+      margin-bottom: 2rem;
+      max-width: 600px;
     }
 
     .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
       margin-top: 2rem;
     }
 
     .skill-card {
-      padding: 1rem;
-      border-radius: 6px;
-      background: var(--card);
+      padding: 1.5rem;
+      border-radius: 0.5rem;
       border: 1px solid var(--border);
-      transition: border-color 0.2s ease;
+      background-color: rgb(0 0 0 / 0.02);
+      transition: all 0.2s;
+    }
+
+    html[data-theme="dark"] .skill-card {
+      background-color: rgb(255 255 255 / 0.02);
     }
 
     .skill-card:hover {
@@ -225,19 +210,40 @@
     }
 
     .skill-card label {
-      display: block;
-      font-size: 11px;
+      font-size: 0.75rem;
       font-weight: 600;
       color: var(--accent);
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.05em;
+      display: block;
       margin-bottom: 0.5rem;
     }
 
     .skill-card p {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
       margin: 0;
-      font-size: 13px;
-      color: var(--text-muted);
+    }
+
+    /* Projects Section */
+    .projects {
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .projects > h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .projects > p {
+      font-size: 1.125rem;
+      color: var(--muted-foreground);
+      margin-bottom: 2rem;
+      max-width: 600px;
     }
 
     .project {
@@ -245,34 +251,36 @@
       grid-template-columns: 1fr 1fr;
       gap: 2rem;
       padding: 2rem;
-      border-radius: 8px;
+      border-radius: 0.5rem;
       border: 1px solid var(--border);
-      background: var(--card);
-      transition: all 0.3s ease;
+      background-color: rgb(0 0 0 / 0.02);
       margin-bottom: 2rem;
+      transition: all 0.3s;
+    }
+
+    html[data-theme="dark"] .project {
+      background-color: rgb(255 255 255 / 0.02);
     }
 
     .project:hover {
       border-color: var(--accent);
-      box-shadow: 0 0 0 1px var(--accent);
-      opacity: 0.95;
     }
 
     .project-image {
+      aspect-ratio: 16 / 10;
+      border-radius: 0.5rem;
+      overflow: hidden;
+      background-color: rgb(0 0 0 / 0.1);
       display: flex;
       align-items: center;
       justify-content: center;
-      border-radius: 6px;
-      background: rgba(0, 0, 0, 0.05);
-      overflow: hidden;
-      aspect-ratio: 16/10;
     }
 
     .project-image img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s;
     }
 
     .project:hover .project-image img {
@@ -280,46 +288,46 @@
     }
 
     .project-content h4 {
-      margin: 0 0 0.5rem;
-      font-size: 12px;
+      font-size: 0.75rem;
       font-weight: 600;
       color: var(--accent);
       text-transform: uppercase;
-      letter-spacing: 0.5px;
+      letter-spacing: 0.05em;
+      margin-bottom: 0.5rem;
     }
 
     .project-content h3 {
-      margin: 0 0 1rem;
-      font-size: 24px;
+      font-size: 1.5rem;
       font-weight: 700;
+      margin-bottom: 1rem;
     }
 
     .project-content > p {
-      color: var(--text-muted);
-      font-size: 14px;
+      font-size: 0.9375rem;
+      color: var(--muted-foreground);
       line-height: 1.6;
-      margin: 0 0 1.5rem;
+      margin-bottom: 1.5rem;
     }
 
     .tech-badges {
       display: flex;
-      gap: 0.5rem;
       flex-wrap: wrap;
+      gap: 0.5rem;
       margin-bottom: 1.5rem;
     }
 
     .tech-badge {
-      display: inline-flex;
-      padding: 0.4rem 0.75rem;
-      border-radius: 4px;
-      background: rgba(0, 0, 0, 0.05);
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      background-color: rgb(0 0 0 / 0.05);
+      color: var(--foreground);
       border: 1px solid var(--border);
-      font-size: 12px;
-      color: var(--text);
     }
 
     html[data-theme="dark"] .tech-badge {
-      background: rgba(255, 255, 255, 0.05);
+      background-color: rgb(255 255 255 / 0.05);
     }
 
     .project-links {
@@ -333,125 +341,324 @@
     .project-links a {
       display: inline-flex;
       align-items: center;
-      gap: 0.4rem;
-      padding: 0.4rem 0.75rem;
-      border-radius: 4px;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 0.375rem;
       border: 1px solid var(--border);
-      color: var(--text);
+      color: var(--foreground);
       text-decoration: none;
-      font-size: 13px;
+      font-size: 0.875rem;
       font-weight: 500;
-      transition: all 0.2s ease;
+      transition: all 0.2s;
     }
 
     .project-links a:hover {
-      background: var(--accent);
-      color: var(--primary-foreground);
+      background-color: var(--accent);
+      color: var(--accent-foreground);
       border-color: var(--accent);
+    }
+
+    /* Design Section */
+    .design-section {
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .design-section > h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .design-section > p {
+      font-size: 1.125rem;
+      color: var(--muted-foreground);
+      margin-bottom: 2rem;
     }
 
     .design-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      margin-top: 2rem;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
     }
 
-    .design-link {
-      padding: 1.5rem;
-      border-radius: 6px;
-      background: var(--card);
+    .design-card {
+      display: flex;
+      flex-direction: column;
+      border-radius: 0.5rem;
       border: 1px solid var(--border);
+      overflow: hidden;
+      background-color: rgb(0 0 0 / 0.02);
+      transition: all 0.3s;
       text-decoration: none;
-      color: var(--text);
-      text-align: center;
-      font-size: 14px;
-      font-weight: 500;
-      transition: all 0.2s ease;
+      color: var(--foreground);
     }
 
-    .design-link:hover {
+    html[data-theme="dark"] .design-card {
+      background-color: rgb(255 255 255 / 0.02);
+    }
+
+    .design-card:hover {
       border-color: var(--accent);
-      color: var(--accent);
-      background: transparent;
+      box-shadow: 0 0 0 1px var(--accent);
+    }
+
+    .design-card-image {
+      aspect-ratio: 16 / 10;
+      overflow: hidden;
+      background-color: rgb(0 0 0 / 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .design-card-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .design-card-content {
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .design-card-title {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--foreground);
+    }
+
+    .design-card-icon {
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    /* Systems Section */
+    .systems-section {
+      border-top: 1px solid var(--border);
+      padding-top: 2rem;
+      margin-bottom: 3rem;
+    }
+
+    .systems-section > h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    .systems-section > p {
+      font-size: 1.125rem;
+      color: var(--muted-foreground);
+      margin-bottom: 2rem;
     }
 
     .systems-list {
-      margin-top: 1.5rem;
+      display: grid;
+      gap: 1.5rem;
     }
 
-    .systems-list ol {
-      margin: 0;
-      padding-left: 1.5rem;
-      color: var(--text-muted);
+    .system-item {
+      border-radius: 0.5rem;
+      border: 1px solid var(--border);
+      background-color: rgb(0 0 0 / 0.02);
+      padding: 2rem;
+      transition: all 0.3s;
     }
 
-    .systems-list li {
-      margin: 1rem 0;
-      font-size: 14px;
+    html[data-theme="dark"] .system-item {
+      background-color: rgb(255 255 255 / 0.02);
+    }
+
+    .system-item:hover {
+      border-color: var(--accent);
+    }
+
+    .system-item h4 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .system-item p {
+      color: var(--muted-foreground);
       line-height: 1.6;
-      color: var(--text-muted);
+      margin-bottom: 1rem;
     }
 
-    .systems-list strong {
-      color: var(--text);
+    .system-item-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
     }
 
-    .systems-list a {
-      color: var(--accent);
-      text-decoration: none;
+    .tech-label {
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      background-color: rgb(0 0 0 / 0.05);
+      color: var(--foreground);
+      border: 1px solid var(--border);
     }
 
-    .systems-list a:hover {
-      text-decoration: underline;
+    html[data-theme="dark"] .tech-label {
+      background-color: rgb(255 255 255 / 0.05);
     }
 
-    footer {
-      margin-top: 4rem;
-      padding: 2rem 0;
+    .system-links {
+      display: flex;
+      gap: 0.75rem;
+      padding-top: 1rem;
       border-top: 1px solid var(--border);
-      text-align: center;
-      color: var(--text-muted);
-      font-size: 13px;
     }
 
-    footer a {
-      color: var(--accent);
+    .system-links a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 0.375rem;
+      border: 1px solid var(--border);
+      color: var(--foreground);
       text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      transition: all 0.2s;
     }
 
-    footer a:hover {
-      text-decoration: underline;
+    .system-links a:hover {
+      background-color: var(--accent);
+      color: var(--accent-foreground);
+      border-color: var(--accent);
     }
 
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border);
+      background-color: rgb(0 0 0 / 0.02);
+      margin-top: 4rem;
+      padding: 3rem 0;
+    }
+
+    html[data-theme="dark"] footer {
+      background-color: rgb(255 255 255 / 0.02);
+    }
+
+    .footer-content {
+      max-width: 1536px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-section h3 {
+      font-size: 0.875rem;
+      font-weight: 600;
+      color: var(--foreground);
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .footer-section ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .footer-section a {
+      font-size: 0.875rem;
+      color: var(--muted-foreground);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-section a:hover {
+      color: var(--foreground);
+    }
+
+    .footer-section .social-icons {
+      display: flex;
+      gap: 1rem;
+    }
+
+    .footer-section .social-icons a {
+      display: inline-flex;
+      width: 1.25rem;
+      height: 1.25rem;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.875rem;
+    }
+
+    .footer-divider {
+      max-width: 1536px;
+      margin: 0 auto;
+      padding: 0 1rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-bottom {
+      max-width: 1536px;
+      margin: 0 auto;
+      padding: 2rem 1rem 0;
+      text-align: center;
+      color: var(--muted-foreground);
+      font-size: 0.875rem;
+    }
+
+    .footer-bottom p {
+      margin: 0;
+    }
+
+    /* Responsive */
     @media (max-width: 768px) {
+      .header-nav {
+        gap: 1rem;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+
       .project {
         grid-template-columns: 1fr;
       }
 
-      .hero-buttons {
-        flex-direction: column;
-      }
-
-      .btn {
-        width: 100%;
-      }
-
       .skills-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
       }
 
       .design-grid {
         grid-template-columns: 1fr;
       }
 
-      section h2 {
-        font-size: 24px;
+      .footer-content {
+        grid-template-columns: 1fr;
       }
+    }
 
-      header {
-        padding: 1rem 0;
-        margin-bottom: 1.5rem;
+    @media (max-width: 640px) {
+      .header-content {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
       }
 
       .header-nav {
@@ -459,209 +666,265 @@
         justify-content: space-between;
       }
 
-      .nav-links {
-        gap: 1.5rem;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .header-left {
-        flex-direction: column;
-        align-items: flex-start;
+      .hero h2 {
+        font-size: 1.25rem;
       }
 
-      .skills-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .project {
-        padding: 1.5rem;
-      }
-
-      section h2 {
-        font-size: 20px;
-      }
-
-      section > p {
-        font-size: 14px;
+      .projects > h3,
+      .design-section > h3,
+      .systems-section > h3 {
+        font-size: 1.5rem;
       }
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <!-- Header -->
-    <header>
+  <!-- Header -->
+  <header>
+    <div class="header-content">
       <div class="header-left">
-        <div class="avatar">TM</div>
-        <div class="header-content">
-          <h1>Tobechukwu Mamah</h1>
-          <p>Full-Stack Software Engineer</p>
-        </div>
+        <h1>Tobechukwu Mamah</h1>
+        <p>Software Engineer</p>
       </div>
       <nav class="header-nav">
         <div class="nav-links">
           <a href="#projects">Projects</a>
-          <a href="#designs">Designs</a>
+          <a href="#design">Design</a>
           <a href="#systems">Systems</a>
         </div>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-          <span id="themeIcon">🌙</span>
-        </button>
+        <div class="social-links">
+          <a href="https://github.com/ptobechi" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          </a>
+          <a href="https://linkedin.com/in/tobechi-paschal-1308a8192" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+          </a>
+          <a href="mailto:ptobechi@outlook.com" aria-label="Email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          </a>
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+            <span id="themeIcon">🌙</span>
+          </button>
+        </div>
       </nav>
-    </header>
+    </div>
+  </header>
 
-    <!-- Main Content -->
-    <main>
-      <!-- Hero Section -->
-      <section id="hero">
-        <h2>Building Reliable Systems & Scalable Interfaces</h2>
-        <p>I craft full-stack solutions with a focus on systems thinking, blockchain integration, and DevOps excellence. From enterprise platforms to mobile applications, I deliver production-ready code that scales.</p>
-        
-        <div class="hero-buttons">
-          <a href="mailto:ptobechi@outlook.com" class="btn btn-primary">Get in Touch</a>
-          <a href="https://github.com/ptobechi" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">View GitHub</a>
+  <!-- Main -->
+  <main class="container">
+    <!-- Hero -->
+    <section class="hero">
+      <h2>Building Reliable Systems & Scalable Interfaces</h2>
+      <p>Full-stack engineer specializing in systems thinking, performance optimization, and cloud-native architecture. From enterprise platforms to mobile applications, I deliver production-ready solutions.</p>
+      <div class="skills-grid">
+        <div class="skill-card">
+          <label>Full-Stack</label>
+          <p>Node, React, Next.js</p>
         </div>
+        <div class="skill-card">
+          <label>Backend</label>
+          <p>NestJS, Express, Fastify</p>
+        </div>
+        <div class="skill-card">
+          <label>Blockchain</label>
+          <p>Web3, Smart Contracts</p>
+        </div>
+        <div class="skill-card">
+          <label>DevOps</label>
+          <p>AWS, Docker, CI/CD</p>
+        </div>
+        <div class="skill-card">
+          <label>Systems</label>
+          <p>C, Memory Management</p>
+        </div>
+        <div class="skill-card">
+          <label>Databases</label>
+          <p>PostgreSQL, MongoDB</p>
+        </div>
+      </div>
+    </section>
 
-        <!-- Skills Grid -->
-        <div class="skills-grid">
-          <div class="skill-card">
-            <label>Full-Stack</label>
-            <p>Node, React, Next.js</p>
+    <!-- Projects -->
+    <section class="projects" id="projects">
+      <h3>Featured Projects</h3>
+      <p>A selection of production applications built from design to deployment.</p>
+
+      <!-- ETB Enterprise -->
+      <article class="project">
+        <div class="project-image">
+          <img src="/placeholder.svg?height=400&width=600" alt="ETB Enterprise dashboard">
+        </div>
+        <div class="project-content">
+          <h4>Business Management Platform</h4>
+          <h3>ETB Enterprise</h3>
+          <p>End-to-end enterprise platform with staff management, payments, authentication, and workflow automation. Built with React and NestJS for reliable performance at scale.</p>
+          <div class="tech-badges">
+            <span class="tech-badge">React</span>
+            <span class="tech-badge">NestJS</span>
+            <span class="tech-badge">PostgreSQL</span>
+            <span class="tech-badge">Stripe</span>
           </div>
-          <div class="skill-card">
-            <label>Backend</label>
-            <p>NestJS, Express, Fastify</p>
-          </div>
-          <div class="skill-card">
-            <label>Blockchain</label>
-            <p>Web3, Smart Contracts</p>
-          </div>
-          <div class="skill-card">
-            <label>DevOps</label>
-            <p>AWS, Docker, CI/CD</p>
-          </div>
-          <div class="skill-card">
-            <label>Systems</label>
-            <p>C, Memory Management</p>
-          </div>
-          <div class="skill-card">
-            <label>Databases</label>
-            <p>PostgreSQL, MongoDB</p>
+          <div class="project-links">
+            <a href="https://www.figma.com/proto/9HoT3YnAXJhD0yIyOWXohD/ETB-enterprise?node-id=0-1" target="_blank">Figma</a>
+            <a href="https://github.com/ptobechi/etb-enterprise" target="_blank">GitHub</a>
           </div>
         </div>
-      </section>
+      </article>
 
-      <!-- Projects Section -->
-      <section id="projects">
-        <h2>Featured Projects</h2>
-        <p>A selection of production applications I've built from design to deployment.</p>
-
-        <!-- ETB Enterprise -->
-        <article class="project">
-          <div class="project-image">
-            <img src="/placeholder.svg?height=400&width=600" alt="ETB Enterprise dashboard">
+      <!-- DrivenLuxe -->
+      <article class="project">
+        <div class="project-image">
+          <img src="/placeholder.svg?height=400&width=600" alt="DrivenLuxe mobile app">
+        </div>
+        <div class="project-content">
+          <h4>Luxury Car Rental Platform</h4>
+          <h3>DrivenLuxe</h3>
+          <p>Cross-platform mobile ride-hailing experience with real-time booking, fleet administration, and secure onboarding. Features real-time maps integration and robust backend architecture.</p>
+          <div class="tech-badges">
+            <span class="tech-badge">React Native</span>
+            <span class="tech-badge">NestJS</span>
+            <span class="tech-badge">MongoDB</span>
+            <span class="tech-badge">WebSockets</span>
           </div>
-          <div class="project-content">
-            <h4>Business Management Platform</h4>
-            <h3>ETB Enterprise</h3>
-            <p>End-to-end enterprise platform with staff management, payments, authentication, and workflow automation. Built with modern React architecture and NestJS backend for reliable performance.</p>
-            <div class="tech-badges">
-              <span class="tech-badge">React</span>
-              <span class="tech-badge">NestJS</span>
-              <span class="tech-badge">PostgreSQL</span>
-              <span class="tech-badge">Stripe</span>
-            </div>
-            <div class="project-links">
-              <a href="https://etbenterprise.com" target="_blank" rel="noopener">Live Site</a>
-              <a href="https://www.figma.com/proto/9HoT3YnAXJhD0yIyOWXohD/ETB-enterprise?node-id=1-2" target="_blank" rel="noopener">Figma</a>
-              <a href="https://github.com/ptobechi/etb-enterprise" target="_blank" rel="noopener">GitHub</a>
-            </div>
+          <div class="project-links">
+            <a href="https://www.figma.com/design/G4nU5HXJtNQ0I9fuMcqjS0/Drive-and-Luxe?node-id=3-4&t=ls3aEiowN65XqBLG-0" target="_blank">Figma</a>
+            <a href="https://github.com/ptobechi/drivenluxe" target="_blank">Frontend</a>
+            <a href="https://github.com/ptobechi/drivenluxe_backend" target="_blank">Backend</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Wokizy -->
+      <article class="project">
+        <div class="project-image">
+          <img src="/placeholder.svg?height=400&width=600" alt="Wokizy vendor dashboard">
+        </div>
+        <div class="project-content">
+          <h4>Food Delivery & Vendor Management</h4>
+          <h3>Wokizy</h3>
+          <p>Modern multi-vendor food delivery platform with admin tools, vendor onboarding, and order management pipelines. Scalable architecture supporting thousands of concurrent users.</p>
+          <div class="tech-badges">
+            <span class="tech-badge">Next.js</span>
+            <span class="tech-badge">NestJS</span>
+            <span class="tech-badge">PostgreSQL</span>
+            <span class="tech-badge">WebSockets</span>
+          </div>
+          <div class="project-links">
+            <a href="https://www.figma.com/design/qIHVxw3J7201vjZxzhzhLf/Wokizy?node-id=90-1004&p=f&t=kQHV3ttOpKTS8YX9-0" target="_blank">Figma</a>
+            <a href="https://github.com/ptobechi/wokizy" target="_blank">Backend</a>
+            <a href="https://github.com/ptobechi/wokizy_landing" target="_blank">Landing</a>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Design Gallery -->
+    <section class="design-section" id="design">
+      <h3>Design & UX</h3>
+      <p>Figma designs showcasing thoughtful interfaces and user-centric flows.</p>
+      <div class="design-grid">
+        <a class="design-card" href="https://www.figma.com/proto/9HoT3YnAXJhD0yIyOWXohD/ETB-enterprise?node-id=0-1" target="_blank" rel="noopener noreferrer">
+          <div class="design-card-image">
+            <img src="/placeholder.svg?height=300&width=500" alt="ETB Enterprise Design System">
+          </div>
+          <div class="design-card-content">
+            <span class="design-card-title">ETB Enterprise Design System</span>
+            <span class="design-card-icon">↗</span>
+          </div>
+        </a>
+        <a class="design-card" href="https://www.figma.com/design/G4nU5HXJtNQ0I9fuMcqjS0/Drive-and-Luxe?node-id=3-4&t=ls3aEiowN65XqBLG-0" target="_blank" rel="noopener noreferrer">
+          <div class="design-card-image">
+            <img src="/placeholder.svg?height=300&width=500" alt="DrivenLuxe Mobile App">
+          </div>
+          <div class="design-card-content">
+            <span class="design-card-title">DrivenLuxe Mobile App</span>
+            <span class="design-card-icon">↗</span>
+          </div>
+        </a>
+        <a class="design-card" href="https://www.figma.com/design/qIHVxw3J7201vjZxzhzhLf/Wokizy?node-id=90-1004&p=f&t=kQHV3ttOpKTS8YX9-0" target="_blank" rel="noopener noreferrer">
+          <div class="design-card-image">
+            <img src="/placeholder.svg?height=300&width=500" alt="Wokizy Vendor Dashboard">
+          </div>
+          <div class="design-card-content">
+            <span class="design-card-title">Wokizy Vendor Dashboard</span>
+            <span class="design-card-icon">↗</span>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <!-- Systems Engineering -->
+    <section class="systems-section" id="systems">
+      <h3>Systems & Low-Level Programming</h3>
+      <p>Demonstrating systems engineering fundamentals and deep technical understanding.</p>
+      <div class="systems-list">
+        <article class="system-item">
+          <h4>printf</h4>
+          <p>Custom printf implementation using variadic functions, demonstrating advanced C knowledge including buffer management, format string parsing, and memory safety.</p>
+          <div class="system-item-tech">
+            <span class="tech-label">C</span>
+            <span class="tech-label">Variadic Functions</span>
+            <span class="tech-label">Memory Management</span>
+          </div>
+          <div class="system-links">
+            <a href="https://github.com/ptobechi/printf" target="_blank">View Repository</a>
           </div>
         </article>
-
-        <!-- DrivenLuxe -->
-        <article class="project">
-          <div class="project-image">
-            <img src="/placeholder.svg?height=400&width=600" alt="DrivenLuxe mobile app">
+        <article class="system-item">
+          <h4>simple_shell</h4>
+          <p>Custom Unix shell implementation with command parsing, process management, and signal handling. Demonstrates low-level system programming and OS concepts.</p>
+          <div class="system-item-tech">
+            <span class="tech-label">C</span>
+            <span class="tech-label">Process Management</span>
+            <span class="tech-label">Signal Handling</span>
           </div>
-          <div class="project-content">
-            <h4>Luxury Car Rental Platform</h4>
-            <h3>DrivenLuxe</h3>
-            <p>Cross-platform mobile ride-hailing experience with real-time booking, fleet administration, and secure onboarding. Features real-time maps integration and robust backend architecture.</p>
-            <div class="tech-badges">
-              <span class="tech-badge">React Native</span>
-              <span class="tech-badge">NestJS</span>
-              <span class="tech-badge">MongoDB</span>
-              <span class="tech-badge">Real-time Maps</span>
-            </div>
-            <div class="project-links">
-              <a href="https://www.figma.com/design/G4nU5HXJtNQ0I9fuMcqjS0/Drive-and-Luxe?node-id=3-4" target="_blank" rel="noopener">Figma</a>
-              <a href="https://github.com/ptobechi/drivenluxe" target="_blank" rel="noopener">Frontend</a>
-              <a href="https://github.com/ptobechi/drivenluxe_backend" target="_blank" rel="noopener">Backend</a>
-            </div>
+          <div class="system-links">
+            <a href="https://github.com/ptobechi/simple_shell" target="_blank">View Repository</a>
           </div>
         </article>
+      </div>
+    </section>
+  </main>
 
-        <!-- Wokizy -->
-        <article class="project">
-          <div class="project-image">
-            <img src="/placeholder.svg?height=400&width=600" alt="Wokizy food delivery platform">
-          </div>
-          <div class="project-content">
-            <h4>Food Delivery & Vendor Management</h4>
-            <h3>Wokizy</h3>
-            <p>Modern multi-vendor food delivery app with admin tools, vendor onboarding, and order management pipelines. Scalable architecture supporting thousands of concurrent users.</p>
-            <div class="tech-badges">
-              <span class="tech-badge">Next.js</span>
-              <span class="tech-badge">NestJS</span>
-              <span class="tech-badge">PostgreSQL</span>
-              <span class="tech-badge">WebSockets</span>
-            </div>
-            <div class="project-links">
-              <a href="https://www.figma.com/design/qIHVxw3J7201vjZxzhzhLf/Wokizy?node-id=90-1004" target="_blank" rel="noopener">Figma</a>
-              <a href="https://github.com/ptobechi/wokizy" target="_blank" rel="noopener">Backend</a>
-              <a href="https://github.com/ptobechi/wokizy_landing" target="_blank" rel="noopener">Landing</a>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <!-- Design Gallery Section -->
-      <section id="designs">
-        <h2>Design Gallery</h2>
-        <p>Figma designs for featured projects. Click to explore prototypes and design systems.</p>
-        <div class="design-grid">
-          <a class="design-link" href="https://www.figma.com/proto/9HoT3YnAXJhD0yIyOWXohD/ETB-enterprise?node-id=1-2" target="_blank" rel="noopener">
-            📊 ETB Enterprise
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Connect</h3>
+        <div class="social-icons">
+          <a href="https://github.com/ptobechi" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
           </a>
-          <a class="design-link" href="https://www.figma.com/design/G4nU5HXJtNQ0I9fuMcqjS0/Drive-and-Luxe?node-id=3-4" target="_blank" rel="noopener">
-            🚗 DrivenLuxe
+          <a href="https://linkedin.com/in/tobechi-paschal-1308a8192" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
           </a>
-          <a class="design-link" href="https://www.figma.com/design/qIHVxw3J7201vjZxzhzhLf/Wokizy?node-id=90-1004" target="_blank" rel="noopener">
-            🍽️ Wokizy
+          <a href="mailto:ptobechi@outlook.com" aria-label="Email">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
           </a>
         </div>
-      </section>
-
-      <!-- Systems Engineering Section -->
-      <section id="systems">
-        <h2>Systems Engineering</h2>
-        <p>Low-level programming projects showcasing C fundamentals, system calls, and memory management.</p>
-        <div class="systems-list">
-          <ol>
-            <li><strong><a href="https://github.com/ptobechi/printf" target="_blank" rel="noopener">Printf</a></strong> — Custom printf implementation using variadic functions, format specifiers, and buffer management.</li>
-            <li><strong><a href="https://github.com/ptobechi/simple_shell" target="_blank" rel="noopener">Simple Shell</a></strong> — POSIX-compliant shell with command parsing, process execution, and environment variable handling.</li>
-          </ol>
-        </div>
-      </section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-      <p>© <span id="year">2025</span> Tobechukwu Mamah — Full-Stack Engineer • <a href="https://github.com/ptobechi" target="_blank" rel="noopener">GitHub</a></p>
-    </footer>
-  </div>
+      </div>
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#design">Design</a></li>
+          <li><a href="#systems">Systems</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Get in Touch</h3>
+        <p style="font-size: 0.875rem; color: var(--muted-foreground); margin-bottom: 1rem;">Interested in collaborating? Let's talk.</p>
+        <a href="mailto:ptobechi@outlook.com" style="display: inline-flex; padding: 0.5rem 1rem; border-radius: 0.375rem; background-color: var(--primary); color: var(--primary-foreground); text-decoration: none; font-size: 0.875rem; font-weight: 500; transition: opacity 0.2s;">
+          Send Email
+        </a>
+      </div>
+    </div>
+    <div class="footer-divider"></div>
+    <div class="footer-bottom">
+      <p>© <span id="year">2025</span> Tobechukwu Mamah. All rights reserved.</p>
+      <p>Built with HTML, CSS & JavaScript • Deployed on GitHub Pages</p>
+    </div>
+  </footer>
 
   <script>
     // Theme Toggle
